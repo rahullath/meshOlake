@@ -1,0 +1,2 @@
+{"level":"info","time":"2025-06-10T10:52:56Z","message":"System has 7GB RAM, setting iceberg writer batch size to 209715200 bytes"}
+{"level":"fatal","time":"2025-06-10T10:52:56Z","message":"failed to ping database: failed to connect to `host=host.docker.internal user=admin database=meshos`: failed SASL auth (FATAL: password authentication failed for user \"admin\" (SQLSTATE 28P01))"}

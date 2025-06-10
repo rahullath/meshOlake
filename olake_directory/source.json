@@ -1,0 +1,14 @@
+{
+  "host": "meshos-postgres",
+  "port": 5432,
+  "database": "meshos",
+  "username": "admin",
+  "password": "password123",
+  "schema": "public",
+  "destination": {
+    "type": "iceberg",
+    "catalog_uri": "http://rest-catalog:8181",
+    "warehouse": "s3a://warehouse/",
+    "namespace": "meshos"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "pipeline_execution": {
+    "timestamp": "2025-06-10T16:41:47.200789",
+    "status": "SUCCESS",
+    "duration_ms": 1247
+  },
+  "data_pipeline": {
+    "source": "PostgreSQL (meshos database)",
+    "transformation": "OLake-style ETL",
+    "destination": "Apache Iceberg (REST Catalog)",
+    "analytics": "Spark SQL"
+  },
+  "key_insights": {
+    "total_habits_tracked": 10,
+    "habit_categories": {
+      "build_habits": 9,
+      "break_habits": 1
+    },
+    "top_performing_habit": "Vaping (successful reduction)",
+    "most_consistent_habit": "Wake Up Early",
+    "improvement_opportunity": "Gym attendance"
+  },
+  "technical_architecture": {
+    "data_extraction": "PostgreSQL source connector",
+    "schema_discovery": "Automatic table introspection",
+    "data_transformation": "Type mapping & validation",
+    "storage_format": "Apache Iceberg (Parquet + metadata)",
+    "query_engine": "Apache Spark SQL",
+    "features": [
+      "ACID transactions",
+      "Time travel",
+      "Schema evolution"
+    ]
+  }
+}

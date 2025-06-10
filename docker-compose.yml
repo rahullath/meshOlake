@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    container_name: meshos-postgres
+    environment:
+      POSTGRES_DB: meshos
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password123
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - meshos-network
+
+  # Simple Iceberg Rest Catalog (standalone)
+  iceberg-rest:
+    image: tabulario/iceberg-rest:0.9.0
+    container_name: iceberg-rest
+    ports:
+      - "8181:8181"
+    environment:
+      - CATALOG_WAREHOUSE=file:///tmp/warehouse
+      - CATALOG_IO__IMPL=org.apache.iceberg.hadoop.HadoopFileIO
+    volumes:
+      - iceberg_warehouse:/tmp/warehouse
+    networks:
+      - meshos-network
+
+volumes:
+  postgres_data:
+  iceberg_warehouse:
+
+networks:
+  meshos-network:
+    driver: bridge
