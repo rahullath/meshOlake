@@ -30,6 +30,33 @@ services:
     networks:
       - meshos-network
 
+  # Add Spark for SQL queries
+  spark:
+    image: apache/spark:3.4.0-scala2.12-java11-python3-ubuntu
+    container_name: spark-sql
+    ports:
+      - "8080:8080"  # Spark Master Web UI
+      - "4040:4040"  # Spark Application Web UI
+    environment:
+      - SPARK_MODE=master
+      - SPARK_MASTER_HOST=spark
+    volumes:
+      - ./spark-defaults.conf:/opt/spark/conf/spark-defaults.conf
+      - iceberg_warehouse:/tmp/warehouse
+    networks:
+      - meshos-network
+    depends_on:
+      - iceberg-rest
+    command: >
+      bash -c "
+      /opt/spark/bin/spark-sql 
+      --conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions
+      --conf spark.sql.catalog.rest=org.apache.iceberg.spark.SparkCatalog
+      --conf spark.sql.catalog.rest.type=rest
+      --conf spark.sql.catalog.rest.uri=http://iceberg-rest:8181
+      --packages org.apache.iceberg:iceberg-spark-runtime-3.4_2.12:1.4.0
+      "
+
 volumes:
   postgres_data:
   iceberg_warehouse:
