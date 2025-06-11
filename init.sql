@@ -1,3 +1,9 @@
+DROP TABLE IF EXISTS habit_checkmarks CASCADE;
+DROP TABLE IF EXISTS habit_scores CASCADE;
+DROP TABLE IF EXISTS habits CASCADE;
+DROP TABLE IF EXISTS transactions CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
+
 -- Users table
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
@@ -82,32 +88,26 @@ INSERT INTO habits (user_id, name, question, description, position, num_repetiti
 
 -- Sample checkmarks data (from actual CSV)
 INSERT INTO habit_checkmarks (user_id, habit_id, date, value) VALUES
--- April 18, 2025 data
-(1, 1, '2025-04-18', 0), -- Vaping
-(1, 2, '2025-04-18', 2), -- Quit Valorant
-(1, 3, '2025-04-18', 2), -- Walk
-(1, 4, '2025-04-18', 3), -- Wake Up Early
-(1, 5, '2025-04-18', 2), -- No Pot
-(1, 6, '2025-04-18', 2), -- No Energy Drink
-(1, 7, '2025-04-18', 2), -- Coding
-(1, 8, '2025-04-18', 2), -- Shower
-(1, 9, '2025-04-18', 2), -- University
-(1, 10, '2025-04-18', 2), -- Gym
--- Continue with more dates...
-;
+(1, 1, '2025-04-18', 0),
+(1, 2, '2025-04-18', 2),
+(1, 3, '2025-04-18', 2),
+(1, 4, '2025-04-18', 3),
+(1, 5, '2025-04-18', 2),
+(1, 6, '2025-04-18', 2),
+(1, 7, '2025-04-18', 2),
+(1, 8, '2025-04-18', 2),
+(1, 9, '2025-04-18', 2),
+(1, 10, '2025-04-18', 2);
 
 -- Sample scores data (from actual CSV)
 INSERT INTO habit_scores (user_id, habit_id, date, score) VALUES
--- April 18, 2025 scores
-(1, 1, '2025-04-18', 0.9876), -- Vaping
-(1, 2, '2025-04-18', 0.9704), -- Quit Valorant
-(1, 3, '2025-04-18', 0.9270), -- Walk
-(1, 4, '2025-04-18', 0.9174), -- Wake Up Early
-(1, 5, '2025-04-18', 0.9043), -- No Pot
-(1, 6, '2025-04-18', 0.8750), -- No Energy Drink
-(1, 7, '2025-04-18', 0.8682), -- Coding
-(1, 8, '2025-04-18', 0.8682), -- Shower
-(1, 9, '2025-04-18', 0.7979), -- University
-(1, 10, '2025-04-18', 0.5960), -- Gym
--- Continue with more dates...
-;
+(1, 1, '2025-04-18', 0.9876),
+(1, 2, '2025-04-18', 0.9704),
+(1, 3, '2025-04-18', 0.9270),
+(1, 4, '2025-04-18', 0.9174),
+(1, 5, '2025-04-18', 0.9043),
+(1, 6, '2025-04-18', 0.8750),
+(1, 7, '2025-04-18', 0.8682),
+(1, 8, '2025-04-18', 0.8682),
+(1, 9, '2025-04-18', 0.7979),
+(1, 10, '2025-04-18', 0.5960);

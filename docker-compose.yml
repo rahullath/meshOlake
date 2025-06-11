@@ -1,18 +1,18 @@
 version: '3.8'
 services:
   postgres:
-    image: postgres:15
+    build: .
     container_name: meshos-postgres
     environment:
       POSTGRES_DB: meshos
       POSTGRES_USER: admin
-      POSTGRES_PASSWORD: password123
+      POSTGRES_PASSWORD: 5646
       POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_INITDB_ARGS: "--data-checksums"
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data:z
     networks:
       - meshos-network
 
@@ -63,4 +63,4 @@ volumes:
 
 networks:
   meshos-network:
-    driver: bridge
+    external: true
