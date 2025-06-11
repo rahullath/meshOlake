@@ -1,0 +1,20 @@
+{
+  "selected_streams": {
+    "public": [
+      {
+        "stream_name": "habits",
+        "partition_regex": "",
+        "normalization": false
+      }
+    ]
+  },
+  "streams": [
+    {
+      "stream": {
+        "name": "habits",
+        "namespace": "public",
+        "sync_mode": "full_refresh"
+      }
+    }
+  ]
+}

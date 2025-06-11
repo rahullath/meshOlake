@@ -1,0 +1,8 @@
+{"level":"info","time":"2025-06-11T14:15:57Z","message":"System has 7GB RAM, setting iceberg writer batch size to 209715200 bytes"}
+{"level":"info","time":"2025-06-11T14:15:57Z","message":"Running sync with state: null"}
+{"level":"info","time":"2025-06-11T14:15:57Z","message":"local writer configuration found, writing at location[/mnt/config/output]"}
+{"level":"info","message":"Standard Replication is selected","time":"2025-06-11T14:15:57Z"}
+{"level":"info","time":"2025-06-11T14:15:57Z","message":"Starting discover for Postgres database meshos"}
+{"level":"info","time":"2025-06-11T14:15:57Z","message":"Valid selected streams are public.users"}
+{"level":"info","time":"2025-06-11T14:15:57Z","message":"Reading stream[public.users] in full_refresh"}
+{"level":"info","time":"2025-06-11T14:15:57Z","message":"Starting backfill for stream[users] with 1 chunks"}

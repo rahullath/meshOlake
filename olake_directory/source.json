@@ -3,7 +3,7 @@
   "port": 5432,
   "database": "meshos",
   "username": "admin",
-  "password": "password123",
+  "password": "5646",
   "schema": "public",
   "destination": {
     "type": "iceberg",

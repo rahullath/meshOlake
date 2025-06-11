@@ -1,0 +1,2 @@
+{"level":"info","time":"2025-06-11T14:13:33Z","message":"System has 7GB RAM, setting iceberg writer batch size to 209715200 bytes"}
+{"level":"fatal","time":"2025-06-11T14:13:33Z","message":"failed to unmarshal file[/mnt/config/streams_users.json]: invalid character 's' looking for beginning of value"}

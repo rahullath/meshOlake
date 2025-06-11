@@ -1,0 +1,13 @@
+{"level":"info","time":"2025-06-11T13:55:28Z","message":"System has 7GB RAM, setting iceberg writer batch size to 209715200 bytes"}
+{"level":"info","time":"2025-06-11T13:55:28Z","message":"Running sync with state: null"}
+{"level":"info","time":"2025-06-11T13:55:28Z","message":"local writer configuration found, writing at location[/mnt/config/data]"}
+{"level":"info","message":"Standard Replication is selected","time":"2025-06-11T13:55:28Z"}
+{"level":"info","time":"2025-06-11T13:55:28Z","message":"Starting discover for Postgres database meshos"}
+{"level":"warn","time":"2025-06-11T13:55:28Z","message":"Skipping; Configured Stream public.habit_checkmarks found invalid due to reason: invalid sync mode[]; valid are [full_refresh]"}
+{"level":"warn","time":"2025-06-11T13:55:28Z","message":"Skipping; Configured Stream public.habit_scores found invalid due to reason: invalid sync mode[]; valid are [full_refresh]"}
+{"level":"warn","time":"2025-06-11T13:55:28Z","message":"Skipping; Configured Stream public.habits found invalid due to reason: invalid sync mode[]; valid are [full_refresh]"}
+{"level":"warn","time":"2025-06-11T13:55:28Z","message":"Skipping; Configured Stream public.transactions found invalid due to reason: invalid sync mode[]; valid are [full_refresh]"}
+{"level":"warn","time":"2025-06-11T13:55:28Z","message":"Skipping; Configured Stream public.users found invalid due to reason: invalid sync mode[]; valid are [full_refresh]"}
+{"level":"info","time":"2025-06-11T13:55:28Z","message":"Valid selected streams are "}
+{"level":"info","time":"2025-06-11T13:55:28Z","message":"Total records read: 0"}
+{"level":"info","message":"state is empty","time":"2025-06-11T13:55:28Z"}
